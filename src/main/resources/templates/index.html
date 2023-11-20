@@ -5,7 +5,24 @@
     <title>Title</title>
 </head>
 <body>
-<h1>My recipes!</h1>
+    <h2 th:text="'List of Recipes'">List of Recipes...</h2>
+
+    <table class="table table-striped">
+        <thread>
+            <tr>
+                <th>Description</th>
+                <th>Categories</th>
+                <th>Notes</th>
+            </tr>
+        </thread>
+        <tbody>
+        <tr th:each="recipe : ${recipes}">
+            <td th:text="${recipe.description}">test</td>
+            <td th:text="${recipe.categories}">Joe</td>
+            <td th:text="${recipe.notes.recipeNotes}">Black</td>
+        </tr>
+        </tbody>
+    </table>
 
 </body>
 </html>
